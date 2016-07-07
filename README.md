@@ -12,11 +12,16 @@ where the model was applied for modeling the Neurosynth corpus of fMRI publicati
 
 When applied to fMRI publication data, the gc-LDA model identifies a set of T topics, where each topic is associated with (1) a spatial probability distribution that captures the extent of a functional neural region, and (2) a probability distribution over linguistic features that describes the cognitive function of the region.
 
-The gcLDA model can additionally be directly applied to other types of data. For example, Blei & Jordan presented correspondence-LDA for modeling annotated images, where pre-segmented images were represented by vectors of real-valued image features.
+The gcLDA model can additionally be directly applied to other types of data. For example, Blei & Jordan presented correspondence-LDA for modeling annotated images, where pre-segmented images were represented by vectors of real-valued image features. The code provided here should be directly applicable to these types of data, provided that they are appropriately formatted.
 
 ## Summary of code
 
-This repository consists of two python classes (contained within the subdirectory 'Python_gclda/gc_lda'), several scripts that illustrate how to uses these classes to train and export a gcLDA model (contained within the subdirectory 'Python_gclda/'), and properly formatted versions of the Neurosynth dataset that the model can be applied to (contained within the subdirectory 'Data/Datasets').
+This repository consists of two python classes (contained within the subdirectory 'Python_gclda/gc_lda'), several scripts that illustrate how to uses these classes to train and export a gcLDA model (contained within the subdirectory 'Python_gclda/'), and formatted versions of the Neurosynth dataset that the model can be applied to (contained within the subdirectory 'Data/Datasets').
+
+## Dataset formatting
+
+The gclda_dataset class requires four .txt files containing all dataset features that the gcLDA model needs to operate. Please see the example datasets in the 'Data/Datasets' subdirectory, for examples of properly formatted data. For additional details about these files, please see the 'README.txt' file in the 'Python_gclda/' subdirectory.
+
 
 ## Code usage examples
 
