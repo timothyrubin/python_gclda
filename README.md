@@ -6,7 +6,7 @@ This is a Python implementation of the Generalized Correspondence-LDA model (gcL
 
 This model is a generalization of the correspondence-LDA model (Blei & Jordan, 2003, "Modeling annotated data), which is used for modeling multiple data-types, where one data-type describes the other. This model was introduced in the following paper:
 
-[PDF](mypage.iu.edu/~timrubin/Files/GC_LDA_Final.pdf)
+[PDF](http://mypage.iu.edu/~timrubin/Files/GC_LDA_Final.pdf)
 
 where the model was applied for modeling fMRI publication data, consisting of the text and reported peak activation coordinates in the Neurosynth corpus of fMRI publications. In this context, the gcLDA model identifies a set of T topics, where each topic is associated with (1) a spatial probability distribution that captures the extent of a functional neural region, and (2) a probability distribution over linguistic features that describes the cognitive function of the region.
 
