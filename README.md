@@ -18,7 +18,18 @@ The gcLDA model can additionally be directly applied to other types of data. For
 
 This repository consists of two python classes (contained within the subdirectory 'Python_gclda/gc_lda'), several scripts that illustrate how to uses these classes to train and export a gcLDA model (contained within the subdirectory 'Python_gclda/'), and properly formatted versions of the Neurosynth dataset that the model can be applied to (contained within the subdirectory 'Data/Datasets').
 
+## Code usage examples
 
+For specific examples of how to use the code, please see the following scripts in the 'Python_gclda' subdirectory:
+
+- 'run_gclda.py': Illustrates how to build a dataset object from formatted fMRI publication data, and then train a gcLDA model (using the dataset object and several hyperparameter settings that get passed to the model constructor)
+- 'export_model_figs.py': Illustrates how to export model data, and png files illustrating each topic, using a trained gcLDA model.
+
+Additional details about the gcLDA code, gcLDA hyper-parameter settings, and about these scripts is provided in the 'README.txt' in the 'Python_gclda/' subdirectory. Note that all three models presented in the source paper ('no subregions', 'unconstrained subregions' and 'constrained subregions') can be trained by modifying the model hyper-parameters
+
+## Example results for trained models
+
+Results for some example trained models (including .png files illustrating all topics for the models) are included in the 'Python_gclda/Python_gclda/gclda_results' subdirectories.
 
 ## Citing the code and data
 
@@ -26,8 +37,8 @@ Please cite the following paper if you wish to reference this code:
 
 Rubin, Timothy N., Koyejo, Oluwasanmi, Jones, Michael N., Yarkoni, Tal, (Submitted). Generalized Correspondence-LDA Models (GC-LDA) for Identifying Functional Regions in the Brain.
 
-To reference any of the datasets contained in this repository, please cite the following:
+To reference any of the datasets contained in this repository, or the Neurosynth dataset in general, please cite the following:
 
 Yarkoni, Tal, Russell A. Poldrack, Thomas E. Nichols, David C. Van Essen, and Tor D. Wager. "Large-scale automated synthesis of human functional neuroimaging data." Nature methods 8, no. 8 (2011): 665-670.
 
-For additional details about the dataset please visit [neurosynth.org](http://http://neurosynth.org/)
+For additional details about the dataset please visit [neurosynth.org](http://neurosynth.org/)
