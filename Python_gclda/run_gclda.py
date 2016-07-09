@@ -20,23 +20,23 @@ results_rootdir = 'gclda_results'
 # -----------------------------------------
 
 current_iter  	 	= 0 	# Current model iteration: if 0, start new model, otherwise load & resume sampling existing model
-total_iterations 	= 1000 	# Total iterations to run from current point
+total_iterations 	= 1000 	# Total iterations to run up to
 save_freq 		 	= 20 	# How often we save a model object and topic-distributions to file
-loglikely_Freq 	 	= 5 	# How often we compute log-likelihood (which slows sampling down but is useful for tracking model progress)
-sampler_verbosity 	= 2 	# How much information about sampler gets printed to console (2 is max, 0 is min)
+loglikely_Freq 	 	= 5 	# How often we compute log-likelihood (which slows training down a bit, but is useful for tracking model progress)
+sampler_verbosity 	= 2 	# How much information about sampler progress gets printed to console (2 is max, 0 is min)
 
 # ------------------------------------------
 # --- Configure gcLDA model Parameters   ---
 # ------------------------------------------
 
 nt  		= 100	# Number of topics
-nr 			= 2 	# Number of subregions (should work with any number)
+nr 			= 2 	# Number of subregions (any positive integer, but must equal 2 if symmetric subregion model)
 alpha 		= .1 	# Prior count on topics for each doc
 beta 		= .01 	# Prior count on word-types for each topic
 gamma 		= .01 	# Prior count added to y-counts when sampling z assignments
 delta 		= 1.0 	# Prior count on subregions for each topic
-roi 		= 50 	# Default ROI (default covariance spatial region we regularize towards)
-dobs 		= 25 	# Sample constant (# observations weighting sigma in direction of default covariance)
+roi 		= 50 	# Default ROI (default covariance of spatial regions--estimates of Sigma diagonals are biased towards 'roi' value)
+dobs 		= 25 	# Sample constant (# observations weighting Sigma estimates in direction of 'roi' value)
 symmetric 	= True	# Use symmetry constraint on subregions? (symmetry requires nr = 2)
 
 seed_init 	= 1 	# Initial value of random seed
@@ -60,12 +60,12 @@ if not os.path.isdir(results_outputdir):
 if current_iter == 0:
 	# --- If starting a new model ---
 	# Create dataset object & Import data
-	dat = gclda_dataset(datasetLabel,dataDirectory)
-	dat.importAllData()
-	dat.displayDatasetSummary()
-	# Initialize the model using the dataset object and all parameter settings
+	dat = gclda_dataset(datasetLabel,dataDirectory) # Create dataset object
+	dat.importAllData() 							# Import all data from txt files into object
+	dat.displayDatasetSummary()						# Print dataset summary to console
+	# Create a model object (using the dataset object and all parameter settings) and initialize
 	model = gclda_model(dat, nt, nr , alpha, beta, gamma, delta, dobs, roi, symmetric, seed_init)
-	model.initialize()
+	model.initialize() # Randomly initialize all z, y and r assignments. Get initial spatial estimates
 else:
 	# --- If resuming existing model ---
 	print "Resuming model at iteration %02d" % current_iter
@@ -75,7 +75,7 @@ else:
 	with gzip.open(results_loadfile,'rb') as f:
 		model = pickle.load(f)
 
-# Display initialized model summary
+# Display initialized or loaded model summary
 model.displayModelSummary()
 
 # ----------------------------------------------------------------
