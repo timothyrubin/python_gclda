@@ -21,7 +21,7 @@ results_rootdir = 'gclda_results'
 
 current_iter  	 	= 0 	# Current model iteration: if 0, start new model, otherwise load & resume sampling existing model
 total_iterations 	= 1000 	# Total iterations to run from current point
-save_freq 		 	= 10 	# How often we save a model object and topic-distributions to file
+save_freq 		 	= 20 	# How often we save a model object and topic-distributions to file
 loglikely_Freq 	 	= 5 	# How often we compute log-likelihood (which slows sampling down but is useful for tracking model progress)
 sampler_verbosity 	= 2 	# How much information about sampler gets printed to console (2 is max, 0 is min)
 
