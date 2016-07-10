@@ -409,6 +409,10 @@ class gclda_model:
 	# -------------------------------------------------------------------
 	#  Compute Log-likelihood of a dataset object given current model
 	# -------------------------------------------------------------------
+	# Computes the log-likelihood of data in any dataset object (either train or test) given the 
+	# posterior predictive distributions over peaks and word-types for the model.
+	# (cf Newman et al. (2009) "Distribution algorithms Topic Models" for standard LDA)
+	# Note that this is not computing the joint log-likelihood of model parameters and data
 	def computeLogLikelihood(self, dat, update_vectors = True):
 		# --- Pre-compute all probabilities from count matrices that are needed for loglikelihood computations
 
@@ -758,7 +762,7 @@ class gclda_model:
 		print "\t delta = %.3f" % self.delta
 		print "\t roi   = %.3f" % self.roi
 		print "\t dobs  = %d" % self.dobs
-		print " Model Dataset-object Dimensionality:" 
+		print " Model Data Dimensionality:" 
 		print "\t # Word-Tokens (nz)   = %d" % self.nz
 		print "\t # Peak-Tokens (ny)   = %d" % self.ny
 		print "\t # Word-Types (nw)    = %d" % self.nw

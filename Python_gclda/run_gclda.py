@@ -35,8 +35,8 @@ alpha 		= .1 	# Prior count on topics for each doc
 beta 		= .01 	# Prior count on word-types for each topic
 gamma 		= .01 	# Prior count added to y-counts when sampling z assignments
 delta 		= 1.0 	# Prior count on subregions for each topic
-roi 		= 50 	# Default ROI (default covariance of spatial regions--estimates of Sigma diagonals are biased towards 'roi' value)
-dobs 		= 25 	# Sample constant (# observations weighting Sigma estimates in direction of 'roi' value)
+roi 		= 50 	# Default spatial 'Region of interest' size (default value of diagonals in covariance matrix for spatial distribution, which the distributions are biased towards)
+dobs 		= 25 	# Region 'default observations' (# pseudo-observations biasing Sigma estimates in direction of default 'roi' value)
 symmetric 	= True	# Use symmetry constraint on subregions? (symmetry requires nr = 2)
 
 seed_init 	= 1 	# Initial value of random seed
