@@ -24,8 +24,8 @@ class gclda_model:
 			beta 		Prior count on word-types for each topic
 			gamma 		Prior count added to y-counts when sampling z assignments
 			delta 		Prior count on subregions for each topic
-			roi 		Default ROI (default covariance spatial region we regularize towards)
-			dobs 		Sample constant (# observations weighting sigma in direction of default covariance)
+			roi 		Default spatial 'Region of interest' size (default value of diagonals in covariance matrix for spatial distribution, which the distributions are biased towards)
+			dobs 		Spatial Region 'default observations' (# observations weighting Sigma estimates in direction of default 'roi' value)
 			symmetric 	Use symmetry constraint on subregions? (symmetry requires nr = 2)
 			seed_init 	Initial value of random seed
 		'''
@@ -744,29 +744,33 @@ class gclda_model:
 	# -----------------------------------------------------------------------------
 	def displayModelSummary(self):
 		print "--- Model Summary ---" 
-		print "\t iter  = %d"   % self.iter
-		print "\t seed_init  = %d"   % self.seed_init
-		print " Model Params:" 
+		print " Current State:" 
+		print "\t Current iteration   = %d"   % self.iter
+		print "\t Current Log-Likely  = %d"   % self.loglikely_tot[-1]
+		print "\t Initialization Seed = %d"   % self.seed_init
+		print " Model Hyper-Parameters:" 
 		print "\t Symmetric = %s"   % self.symmetric
-		print "\t nt = %d" % self.nt
-		print "\t nr = %d" % self.nr
+		print "\t nt    = %d" % self.nt
+		print "\t nr    = %d" % self.nr
 		print "\t alpha = %.3f" % self.alpha
 		print "\t beta  = %.3f" % self.beta
 		print "\t gamma = %.3f" % self.gamma
 		print "\t delta = %.3f" % self.delta
-		print "\t dobs  = %.3f" % self.dobs
 		print "\t roi   = %.3f" % self.roi
-		print " Model Object Dimensionality:" 
-		print "\t nz     = %d" % self.nz
-		print "\t ny     = %d" % self.ny
-		print "\t nw     = %d" % self.nw
-		print "\t nd     = %d" % self.nd
-		print "\t nxdims = %d" % self.nxdims
-		print " Count matrices:" 
-		print "\t ny_d_t   = %r" % (self.ny_d_t.shape,)
-		print "\t ny_r_t   = %r" % (self.ny_r_t.shape,)
-		print "\t nz_w_t   = %r" % (self.nz_w_t.shape,)
-		print "\t nz_sum_t = %r" % (self.nz_sum_t.shape,)
+		print "\t dobs  = %d" % self.dobs
+		print " Model Dataset-object Dimensionality:" 
+		print "\t # Word-Tokens (nz)   = %d" % self.nz
+		print "\t # Peak-Tokens (ny)   = %d" % self.ny
+		print "\t # Word-Types (nw)    = %d" % self.nw
+		print "\t # Documents (nd)     = %d" % self.nd
+		print "\t Peak-Dimensionality  = %d" % self.nxdims
+		# print " DEBUG: Count matrices dimensionality:" 
+		# print "\t ny_d_t   = %r" % (self.ny_d_t.shape,)
+		# print "\t ny_r_t   = %r" % (self.ny_r_t.shape,)
+		# print "\t nz_w_t   = %r" % (self.nz_w_t.shape,)
+		# print "\t nz_sum_t = %r" % (self.nz_sum_t.shape,)
+		# print "\t regions_mu    = %r" % (np.shape(self.regions_mu),)
+		# print "\t regions_sigma = %r" % (np.shape(self.regions_sigma),)
 		# print " DEBUG: Indicator vectors:" 
 		# print "\t zidx   = %r" % self.zidx.shape
 		# print "\t yidx   = %r" % self.yidx.shape
@@ -793,6 +797,5 @@ class gclda_model:
 
 if __name__=="__main__":
 	print "Calling 'gclda_model.py' as a script"
-	model = gclda_model('dummy')
 else:
 	print "Importing 'gclda_model.py'"
