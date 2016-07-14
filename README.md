@@ -16,25 +16,32 @@ The gcLDA model can additionally be directly applied to other types of data. For
 
 ## Summary of code
 
-This repository consists of two python classes (contained within the subdirectory 'Python_gclda/gc_lda'), several scripts that illustrate how to uses these classes to train and export a gcLDA model (contained within the subdirectory 'Python_gclda/'), and formatted versions of the Neurosynth dataset that the model can be applied to (contained within the subdirectory 'Data/Datasets').
+## Summary of code
+
+This repository consists of two python classes (contained within the subdirectory 'python_gclda/python_gclda_package'), several scripts that illustrate how to uses these classes to train and export a gcLDA model (contained within the subdirectory 'python_gclda/'), and formatted versions of the Neurosynth dataset that the model can be applied to (contained within the subdirectory 'python_gclda/datasets/neurosynth').
 
 ## Dataset formatting
 
-The gclda_dataset class requires four .txt files containing all dataset features that the gcLDA model needs to operate. Please see the example datasets in the 'Data/Datasets' subdirectory, for examples of properly formatted data. For additional details about these files, please see the 'README.txt' file in the 'Python_gclda/' subdirectory.
+The gclda_dataset class requires four .txt files containing all dataset features that the gcLDA model needs to operate. Please see the example datasets in the 'Data/Datasets' subdirectory, for examples of properly formatted data. For additional details about these files, please see the 'README.txt' file in the 'python_gclda/' subdirectory.
 
+## Tutorial usage examples
+
+For a simple tutorial showing most uses of the gclda code, see the following file:
+	'python_gclda/examples/tutorial_gclda.py'
+This script illustrates how to (1) build a dataset object (using a small subset of the neurosynth dataset), (2) train a gclda model on the dataset object, and (3) export figures illustrating the trained model to files for viewing.
 
 ## Code usage examples
 
-For specific examples of how to use the code, please see the following scripts in the 'Python_gclda' subdirectory:
+For additional examples of how to use the code, please see the following scripts in the 'python_gclda/examples' subdirectory:
 
-- 'run_gclda.py': Illustrates how to build a dataset object from formatted fMRI publication data, and then train a gcLDA model (using the dataset object and several hyperparameter settings that get passed to the model constructor)
+- 'script_run_gclda.py': Illustrates how to build a dataset object from a full formatted version of the full neurosynth dataset, and then train a gcLDA model (using the dataset object and several hyperparameter settings that get passed to the model constructor)
 - 'export_model_figs.py': Illustrates how to export model data, and png files illustrating each topic, using a trained gcLDA model.
 
 Additional details about the gcLDA code, gcLDA hyper-parameter settings, and about these scripts is provided in the 'README.txt' in the 'Python_gclda/' subdirectory. Note that all three models presented in the source paper ('no subregions', 'unconstrained subregions' and 'constrained subregions') can be trained by modifying the model hyper-parameters
 
 ## Example results for trained models
 
-Results for some example trained models (including .png files illustrating all topics for the models) are included in the 'Python_gclda/Python_gclda/gclda_results' subdirectories.
+Results for some example trained models (including .png files illustrating all topics for the models) are included in the 'python_gclda/example_results' subdirectories.
 
 ## Citing the code and data
 
