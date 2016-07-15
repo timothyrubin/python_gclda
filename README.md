@@ -33,9 +33,9 @@ The classes needed to run a gclda model can then be imported into python using:
 
 The repository consists of: 
 
-1 - two python classes (contained within the subdirectory 'python_gclda/python_gclda_package'), 2 - several scripts and a tutorial that illustrate how to uses these classes to train and export a gcLDA model (contained within the subdirectory 'python_gclda/examples')
-3 - formatted versions of the Neurosynth dataset that can be used to train a gclda model (contained within the subdirectory 'python_gclda/datasets/neurosynth')
-4 - some examples of results from trained gclda models under different parameter settings (contained within subdirectories of 'python_gclda/example_results').
+- two python classes (contained within the subdirectory 'python_gclda/python_gclda_package'), 2 - several scripts and a tutorial that illustrate how to uses these classes to train and export a gcLDA model (contained within the subdirectory 'python_gclda/examples')
+- formatted versions of the Neurosynth dataset that can be used to train a gclda model (contained within the subdirectory 'python_gclda/datasets/neurosynth')
+- some examples of results from trained gclda models under different parameter settings (contained within subdirectories of 'python_gclda/example_results').
 
 ## Dataset formatting
 
