@@ -14,9 +14,22 @@ When applied to fMRI publication data, the gc-LDA model identifies a set of T to
 
 The gcLDA model can additionally be directly applied to other types of data. For example, Blei & Jordan presented correspondence-LDA for modeling annotated images, where pre-segmented images were represented by vectors of real-valued image features. The code provided here should be directly applicable to these types of data, provided that they are appropriately formatted.
 
-## Summary of code
+## Installation
 
-## Summary of code
+Dependencies for this package are: scipy, numpy and matplotlib. Additionally, some of the example scripts rely on gzip and cPickle for saving compressed models to disk
+
+This code can be installed as a python package using:
+
+	> python setup.py install
+
+The classes needed to run a gclda model can then be imported into python using:
+
+	> from python_gclda_package.gclda_dataset import gclda_dataset
+
+	> from python_gclda_package.gclda_model   import gclda_model
+
+
+## Summary of python_gclda package
 
 This repository consists of two python classes (contained within the subdirectory 'python_gclda/python_gclda_package'), several scripts that illustrate how to uses these classes to train and export a gcLDA model (contained within the subdirectory 'python_gclda/'), and formatted versions of the Neurosynth dataset that the model can be applied to (contained within the subdirectory 'python_gclda/datasets/neurosynth').
 
