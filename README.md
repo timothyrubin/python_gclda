@@ -6,7 +6,7 @@ This is a Python implementation of the Generalized Correspondence-LDA model (gcL
 
 This model is a generalization of the correspondence-LDA model (Blei & Jordan, 2003, "Modeling annotated data"), which is used for modeling multiple data-types, where one data-type describes the other. This model was introduced in the following paper:
 
-[PDF](http://mypage.iu.edu/~timrubin/Files/GC_LDA_Final.pdf)
+[Generalized Correspondence-LDA Models (GC-LDA) for Identifying Functional Regions in the Brain](http://mypage.iu.edu/~timrubin/Files/GC_LDA_Final.pdf)
 
 where the model was applied for modeling the Neurosynth corpus of fMRI publications. Each publication in this corpus consists of text and a set of reported peak activation brain coordinates. 
 
@@ -67,8 +67,8 @@ Please cite the following paper if you wish to reference this code:
 
 Rubin, Timothy N., Koyejo, Oluwasanmi, Jones, Michael N., Yarkoni, Tal, (Submitted). Generalized Correspondence-LDA Models (GC-LDA) for Identifying Functional Regions in the Brain.
 
-To reference any of the datasets contained in this repository, or the Neurosynth dataset in general, please cite the following:
+To reference any of the datasets contained in this repository or Neurosynth:
 
 Yarkoni, Tal, Russell A. Poldrack, Thomas E. Nichols, David C. Van Essen, and Tor D. Wager. "Large-scale automated synthesis of human functional neuroimaging data." Nature methods 8, no. 8 (2011): 665-670.
 
-For additional details about the dataset please visit [neurosynth.org](http://neurosynth.org/)
+For additional details about Neurosynth please visit [neurosynth.org](http://neurosynth.org/)
