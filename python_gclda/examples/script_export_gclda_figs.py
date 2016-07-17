@@ -12,7 +12,7 @@ import gzip
 
 datasetLabel = '2015Filtered2_TrnTst1p1'
 
-current_iter = 5 # Saved model iteration
+current_iter = 1000 # Saved model iteration
 
 nt  		= 100	# Number of topics
 nr 			= 2 	# Number of subregions (should work with any number)
