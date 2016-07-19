@@ -14,16 +14,15 @@ import os
 # --- Create a dataset object and import data ---
 # -----------------------------------------------
 
-# Note: for this section, this tutorial will assume you are the 'examples' directory within
-#	the gclda package is your working directory. If not, relative paths here
-#	will need to be modified as needed
+# Note: for this section, this tutorial will assume you are the 'examples' directory within the gclda package
+#	is your working directory. If not, relative paths to the included datasets need to be modified 
 
-# Create dataset object instance, 'dat'
-#  (Note that for the tutorial, we use a subset of 1000 documents from the neurosynth dataset)
+# Create dataset object instance: 'dat'
+#  Note that for the tutorial, we use a subset of 1000 documents from the neurosynth dataset
 # Inputs:
-datasetLabel  ='2015Filtered2_1000docs'	# The directory name containing the dataset .txt files, which will be used as a 'dataset label'
+datasetLabel  ='2015Filtered2_1000docs'				# The directory name containing the dataset .txt files, which will be used as a 'dataset label'
 datasetDirectory =	'../datasets/neurosynth/' 		# The relative path from the working directory to the root-directory containing the dataset folder
-dat = gclda_dataset(datasetLabel,datasetDirectory)
+dat = gclda_dataset(datasetLabel,datasetDirectory) 	# Create dataset object 'dat'
 # Import data from all files that are in dataset directory:
 dat.importAllData()
 # View dataset object after importing data:
@@ -33,7 +32,7 @@ dat.displayDatasetSummary()
 # --- Create a gclda model object ---
 # -----------------------------------
 
-# Create gclda model, using T=25 topics, R=2 subregions per topic, and default values for all other hyper-parameters
+# Create gclda model, using T=100 topics, R=2 subregions per topic, and default values for all other hyper-parameters
 # 	(See other sample scripts for details about all hyperparameters)
 T = 100
 R = 2
