@@ -156,7 +156,7 @@ class gclda_dataset:
 if __name__=="__main__":
 	print "Calling 'gclda_dataset.py' as a script"
 
-	gcdat = gclda_dataset('2015Filtered2_TrnTst1P1_1000docs','../datasets/neurosynth')
+	gcdat = gclda_dataset('2015Filtered2_1000docs','../datasets/neurosynth/')
 	gcdat.importAllData()
 	gcdat.displayDatasetSummary()
 else:
