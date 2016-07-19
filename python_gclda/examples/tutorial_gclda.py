@@ -1,9 +1,14 @@
 # This file illustrates basic usage of the python_gclda toolbox. Specifically, we do the following steps:
 #	1 - Import the python modules
 # 	2 - Build a python dataset object, and import data into the object from raw text files containing all data that the gcLDA model uses
-#	3 - Build a gclda model object
-#	4 - Train a gclda model object (but using fewer iterations than should be used for actual modeling)
+#	3 - Build a gclda model object instance
+#	4 - Train the gclda model object (using fewer iterations than should be used for actual modeling)
 #	5 - Export figures 
+#
+# Note: this tutorial will assume that your working directory is the '/examples' subdirectory within
+#	the gclda package. If it is not, the relative paths to the datasets need to be modified for 
+#	creating the variable 'datasetLabel' below
+
 
 # Import packages
 from python_gclda_package.gclda_dataset import gclda_dataset
@@ -14,11 +19,10 @@ import os
 # --- Create a dataset object and import data ---
 # -----------------------------------------------
 
-# Note: for this section, this tutorial will assume you are the 'examples' directory within the gclda package
-#	is your working directory. If not, relative paths to the included datasets need to be modified 
+# For this tutorial, we use a subset of 1000 documents from the neurosynth dataset. 
+# This will run faster, but produce sparser and noisier topics than the full dataset
 
 # Create dataset object instance: 'dat'
-#  Note that for the tutorial, we use a subset of 1000 documents from the neurosynth dataset
 # Inputs:
 datasetLabel  ='2015Filtered2_1000docs'				# The directory name containing the dataset .txt files, which will be used as a 'dataset label'
 datasetDirectory =	'../datasets/neurosynth/' 		# The relative path from the working directory to the root-directory containing the dataset folder
@@ -47,7 +51,7 @@ model.displayModelSummary()
 # --- Run the gcLDA training for a few iterations ---
 # ---------------------------------------------------
 
-# Note that we run for just a few examples for the sake of time here.
+# Note that we run for just a few iterations for the sake of time here.
 #	 When training a model, we recommend running for at least 1000 total iterations
 iterations = 25
 # During training, the model will print details about the model log-likelihood, etc., to the console. Verbosity arguments can change that.
