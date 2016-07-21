@@ -50,6 +50,9 @@ For a simple tutorial showing most uses of the gclda code, see the following fil
 	'python_gclda/examples/tutorial_gclda.py'
 This script illustrates how to (1) build a dataset object (using a small subset of the neurosynth dataset), (2) train a gclda model on the dataset object, and (3) export figures illustrating the trained model to files for viewing.
 
+There is also an alternative verion of the tutorial in the following Jupyter notebook:
+	'python_gclda/examples/tutorial_gclda.py'
+
 ## Code usage examples
 
 For additional examples of how to use the code, please see the following scripts in the 'python_gclda/examples' subdirectory:
