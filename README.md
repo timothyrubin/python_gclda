@@ -61,7 +61,7 @@ For additional examples of how to use the code, please see the following scripts
 - 'script_run_gclda.py': Illustrates how to build a dataset object from a full formatted version of the full neurosynth dataset, and then train a gcLDA model (using the dataset object and several hyperparameter settings that get passed to the model constructor)
 - 'export_model_figs.py': Illustrates how to export model data, and png files illustrating each topic, using a trained gcLDA model.
 
-Additional details about the gcLDA code, gcLDA hyper-parameter settings, and about these scripts is provided in the 'README.txt' in the 'Python_gclda/' subdirectory. Note that all three models presented in the source paper ('no subregions', 'unconstrained subregions' and 'constrained subregions') can be trained by modifying the model hyper-parameters
+Additional details about the gcLDA code, gcLDA hyper-parameter settings, and about these scripts is provided in the 'README.txt' in the 'python_gclda/documentation' subdirectory. Note that all three models presented in the source paper ('no subregions', 'unconstrained subregions' and 'constrained subregions') can be trained by modifying the model hyper-parameters appropriately.
 
 ## Example results for trained models
 
