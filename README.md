@@ -69,7 +69,7 @@ Please cite the following paper if you wish to reference this code:
 
 Rubin, Timothy N., Koyejo, Oluwasanmi, Jones, Michael N., Yarkoni, Tal, (Submitted). Generalized Correspondence-LDA Models (GC-LDA) for Identifying Functional Regions in the Brain.
 
-To reference any of the datasets contained in this repository or Neurosynth:
+To reference any of the datasets contained in this repository, or Neurosynth itself:
 
 Yarkoni, Tal, Russell A. Poldrack, Thomas E. Nichols, David C. Van Essen, and Tor D. Wager. "Large-scale automated synthesis of human functional neuroimaging data." Nature methods 8, no. 8 (2011): 665-670.
 
