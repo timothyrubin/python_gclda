@@ -16,7 +16,7 @@ The gcLDA model can additionally be directly applied to other types of data. For
 
 ## Installation
 
-Dependencies for this package are: scipy, numpy and matplotlib. If you don't have these installed, these easiest way to do so might be to use [Anaconda](https://www.continuum.io/downloads). Alternatively, [this page](http://www.lowindata.com/2013/installing-scientific-python-on-mac-os-x/) gives a useful tutorial on installing them.
+Dependencies for this package are: scipy, numpy and matplotlib. If you don't have these installed, these easiest way to do so might be to use [Anaconda](https://www.continuum.io/downloads). Alternatively, [this page](http://www.lowindata.com/2013/installing-scientific-python-on-mac-os-x/) provides a tutorial on installing them (note that, as described in a comment on that page, "brew install gfortran" now must be replaced by "brew install gcc").
 
 Additionally, some of the example scripts rely on gzip and cPickle (for saving compressed model instances to disk).
 
