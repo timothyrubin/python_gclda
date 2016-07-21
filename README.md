@@ -8,7 +8,7 @@ The gcLDA model is a generalization of the correspondence-LDA model (Blei & Jord
 
 [Generalized Correspondence-LDA Models (GC-LDA) for Identifying Functional Regions in the Brain](http://mypage.iu.edu/~timrubin/Files/GC_LDA_Final.pdf)
 
-where the model was applied for modeling the Neurosynth corpus of fMRI publications. Each publication in this corpus consists of a set of word tokens and a set of reported peak activation coordinates (x, y and z spatial coordinates corresponding to brain locations). 
+where the model was applied for modeling the [Neurosynth](http://neurosynth.org/) corpus of fMRI publications. Each publication in this corpus consists of a set of word tokens and a set of reported peak activation coordinates (x, y and z spatial coordinates corresponding to brain locations). 
 
 When applied to fMRI publication data, the gcLDA model identifies a set of T topics, where each topic captures a 'functional region' of the brain. More formally: each topic is associated with (1) a spatial probability distribution that captures the extent of a functional neural region, and (2) a probability distribution over linguistic features that captures the cognitive function of the region.
 
