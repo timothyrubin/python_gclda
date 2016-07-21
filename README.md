@@ -42,7 +42,7 @@ The repository consists of:
 
 ## Dataset formatting
 
-The gclda_dataset class requires four .txt files containing all dataset features that the gcLDA model needs to operate. Please see the example datasets in the 'Data/Datasets' subdirectory, for examples of properly formatted data. For additional details about these files, please see the 'README.txt' file in the 'python_gclda/' subdirectory.
+The gclda_dataset class requires four .txt files containing all dataset features that the gcLDA model needs to operate. Please see the example datasets in the 'Data/Datasets' subdirectory, for examples of properly formatted data. For additional details about these files, please see the 'README.txt' file in the 'python_gclda/documentation' subdirectory.
 
 ## Tutorial usage examples
 
@@ -72,5 +72,7 @@ Rubin, Timothy N., Koyejo, Oluwasanmi, Jones, Michael N., Yarkoni, Tal, (Submitt
 To reference any of the datasets contained in this repository or Neurosynth:
 
 Yarkoni, Tal, Russell A. Poldrack, Thomas E. Nichols, David C. Van Essen, and Tor D. Wager. "Large-scale automated synthesis of human functional neuroimaging data." Nature methods 8, no. 8 (2011): 665-670.
+
+Additionally, the complete Neurosynth datasets can be accessed at http://github.com/neurosynth/neurosynth-data (note however that those datasets need to be reformatted in order to make them work with the python_gclda package)
 
 For additional details about Neurosynth please visit [neurosynth.org](http://neurosynth.org/)
