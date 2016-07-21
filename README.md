@@ -46,10 +46,10 @@ The gclda_dataset class requires four .txt files containing all dataset features
 
 ## Tutorial usage examples
 
-For a simple tutorial showing most uses of the gclda code, see the following file:
+For a simple tutorial illustrating usage of the gclda package, see the following file:
 - 'python_gclda/examples/tutorial_gclda.py'
 
-This script illustrates how to (1) build a dataset object (using a small subset of the neurosynth dataset), (2) train a gclda model on the dataset object, and (3) export figures illustrating the trained model to files for viewing.
+This tutorial demonstrates how to (1) build a dataset object (using a small subset of the neurosynth dataset), (2) train a gclda model on the dataset object, and (3) export figures illustrating the trained model to files for viewing.
 
 There is also a version of this same tutorial in the following Jupyter notebook:
 - 'python_gclda/examples/tutorial_gclda_notebook.ipynb'
