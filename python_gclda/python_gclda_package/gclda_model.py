@@ -767,13 +767,13 @@ class gclda_model:
 		print "\t delta = %.3f" % self.delta
 		print "\t roi   = %.3f" % self.roi
 		print "\t dobs  = %d" % self.dobs
-		print " Model Dataset-Object Information:" 
-		print "\t # DatasetLabel       = %s" % self.dat.datasetLabel
+		print " Model Training-Data Information:" 
+		print "\t Dataset Label        = %s" % self.dat.datasetLabel
 		print "\t # Word-Tokens (nz)   = %d" % self.nz
 		print "\t # Peak-Tokens (ny)   = %d" % self.ny
 		print "\t # Word-Types (nw)    = %d" % self.nw
 		print "\t # Documents (nd)     = %d" % self.nd
-		print "\t Peak-Dimensionality  = %d" % self.nxdims
+		print "\t # Peak-Dimensions    = %d" % self.nxdims
 		# print " DEBUG: Count matrices dimensionality:" 
 		# print "\t ny_d_t   = %r" % (self.ny_d_t.shape,)
 		# print "\t ny_r_t   = %r" % (self.ny_r_t.shape,)
