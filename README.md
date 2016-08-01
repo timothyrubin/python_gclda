@@ -71,17 +71,15 @@ Results for some example trained models (including .png files illustrating all t
 
 Please cite the following paper if you wish to reference this code:
 
-Timothy N Rubin, Oluwasanmi Koyejo, Michael N Jones, Tal Yarkoni (Submitted). Generalized Correspondence-LDA Models (GC-LDA) for Identifying Functional Regions in the Brain.
+- Timothy N Rubin, Oluwasanmi Koyejo, Michael N Jones, Tal Yarkoni (Submitted). Generalized Correspondence-LDA Models (GC-LDA) for Identifying Functional Regions in the Brain.
 
 Additionally, the following paper demonstrates a variety of cool applications for gcLDA models trained on Neurosynth (such as "brain decoding"):
 
-Timothy N Rubin, Oluwasanmi Koyejo, Krzysztof J Gorgolewski, Michael N Jones, Russell A Poldrack, Tal Yarkoni (Submitted). [Decoding brain activity using a large-scale probabilistic functional-anatomical atlas of human cognition](http://biorxiv.org/content/early/2016/06/18/059618)
-
-http://biorxiv.org/content/early/2016/06/18/059618
+- Timothy N Rubin, Oluwasanmi Koyejo, Krzysztof J Gorgolewski, Michael N Jones, Russell A Poldrack, Tal Yarkoni (Submitted). [Decoding brain activity using a large-scale probabilistic functional-anatomical atlas of human cognition](http://biorxiv.org/content/early/2016/06/18/059618)
 
 To reference any of the datasets contained in this repository, or Neurosynth itself:
 
-Yarkoni, Tal, Russell A. Poldrack, Thomas E. Nichols, David C. Van Essen, and Tor D. Wager. "Large-scale automated synthesis of human functional neuroimaging data." Nature methods 8, no. 8 (2011): 665-670.
+- Tal Yarkoni, Russell A. Poldrack, Thomas E. Nichols, David C. Van Essen, and Tor D. Wager. "Large-scale automated synthesis of human functional neuroimaging data." Nature methods 8, no. 8 (2011): 665-670.
 
 Additionally, the complete Neurosynth datasets can be accessed at http://github.com/neurosynth/neurosynth-data (note however that those datasets need to be reformatted in order to make them work with the python_gclda package)
 
