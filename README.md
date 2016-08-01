@@ -71,7 +71,13 @@ Results for some example trained models (including .png files illustrating all t
 
 Please cite the following paper if you wish to reference this code:
 
-Rubin, Timothy N., Koyejo, Oluwasanmi, Jones, Michael N., Yarkoni, Tal, (Submitted). Generalized Correspondence-LDA Models (GC-LDA) for Identifying Functional Regions in the Brain.
+Timothy N Rubin, Oluwasanmi Koyejo, Michael N Jones, Tal Yarkoni (Submitted). Generalized Correspondence-LDA Models (GC-LDA) for Identifying Functional Regions in the Brain.
+
+Additionally, the following paper demonstrates a variety of cool applications for gcLDA models trained on Neurosynth (such as "brain decoding"):
+
+Timothy N Rubin, Oluwasanmi Koyejo, Krzysztof J Gorgolewski, Michael N Jones, Russell A Poldrack, Tal Yarkoni (Submitted). [Decoding brain activity using a large-scale probabilistic functional-anatomical atlas of human cognition](http://biorxiv.org/content/early/2016/06/18/059618)
+
+http://biorxiv.org/content/early/2016/06/18/059618
 
 To reference any of the datasets contained in this repository, or Neurosynth itself:
 
