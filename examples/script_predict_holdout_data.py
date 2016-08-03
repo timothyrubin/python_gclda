@@ -13,7 +13,7 @@ import numpy as np
 
 datasetLabel = '2015Filtered2_TrnTst1P1'
 
-current_iter = 5 # Saved model iteration
+current_iter = 1000 # Saved model iteration
 
 nt  		= 100	# Number of topics
 nr 			= 2 	# Number of subregions (any positive integer, but must equal 2 if symmetric subregion model)

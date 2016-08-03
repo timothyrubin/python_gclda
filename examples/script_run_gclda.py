@@ -1,7 +1,6 @@
 # This script is useful for training a full model.
-# It can either create a new model or load an existing model (depending on the value of 'current_iter')
+# It can either create a new model or load an existing model (depending on the value of 'current_iter'), and then perform training updates on the model
 # It will save a compressed model to disk every so often, in case program needs to be halted an later resumed
-
 
 from python_gclda_package.gclda_dataset import gclda_dataset
 from python_gclda_package.gclda_model   import gclda_model
@@ -26,8 +25,8 @@ results_rootdir = 'gclda_results'
 
 current_iter  	 	= 0 	# Current model iteration: if 0, start new model, otherwise load & resume sampling existing model
 total_iterations 	= 1000 	# Total iterations to run up to
-save_freq 		 	= 5 	# How often we save a model object and topic-distributions to file
-loglikely_Freq 	 	= 1 	# How often we compute log-likelihood (which slows training down a bit, but is useful for tracking model progress)
+save_freq 		 	= 25 	# How often we save a model object and topic-distributions to file
+loglikely_Freq 	 	= 5 	# How often we compute log-likelihood (which slows training down a bit, but is useful for tracking model progress)
 sampler_verbosity 	= 2 	# How much information about sampler progress gets printed to console (2 is max, 0 is min)
 
 # ------------------------------------------
