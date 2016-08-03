@@ -35,37 +35,37 @@ The classes needed to run a gclda model can then be imported into python using:
 
 The repository consists of: 
 
-- two python classes (contained within the subdirectory 'python_gclda/python_gclda_package')
-- several scripts and a tutorial that illustrate how to uses these classes to train and export a gcLDA model (contained within the subdirectory 'python_gclda/examples')
-- formatted versions of the Neurosynth dataset that can be used to train a gclda model (contained within the subdirectory 'python_gclda/datasets/neurosynth')
-- some examples of results from trained gclda models under different parameter settings (contained within subdirectories of 'python_gclda/example_results').
+- two python classes (contained within the subdirectory 'python_gclda_package')
+- several scripts and a tutorial that illustrate how to uses these classes to train and export a gcLDA model (contained within the subdirectory 'examples')
+- formatted versions of the Neurosynth dataset that can be used to train a gclda model (contained within the subdirectory 'datasets/neurosynth')
+- some examples of results from trained gclda models under different parameter settings (contained within subdirectories of 'example_results').
 
 ## Dataset formatting
 
-The gclda_dataset class requires four .txt files containing all dataset features that the gcLDA model needs to operate. Please see the example datasets in the 'Data/Datasets' subdirectory, for examples of properly formatted data. For additional details about these files, please see the 'README.txt' file in the 'python_gclda/documentation' subdirectory.
+The gclda_dataset class requires four .txt files containing all dataset features that the gcLDA model needs to operate. Please see the example datasets in the 'Data/Datasets' subdirectory, for examples of properly formatted data. For additional details about these files, please see the 'README.txt' file in the 'documentation' subdirectory.
 
 ## Tutorial usage examples
 
 For a simple tutorial illustrating usage of the gclda package, see the following file:
-- 'python_gclda/examples/tutorial_gclda.py'
+- 'examples/tutorial_gclda.py'
 
 This tutorial demonstrates how to (1) build a dataset object (using a small subset of the neurosynth dataset), (2) train a gclda model on the dataset object, and (3) export figures illustrating the trained model to files for viewing.
 
 There is also a version of this same tutorial in the following Jupyter notebook:
-- 'python_gclda/examples/tutorial_gclda_notebook.ipynb'
+- 'examples/tutorial_gclda_notebook.ipynb'
 
 ## Code usage examples
 
-For additional examples of how to use the code, please see the following scripts in the 'python_gclda/examples' subdirectory:
+For additional examples of how to use the code, please see the following scripts in the 'examples' subdirectory:
 
 - 'script_run_gclda.py': Illustrates how to build a dataset object from a full formatted version of the full neurosynth dataset, and then train a gcLDA model (using the dataset object and several hyperparameter settings that get passed to the model constructor)
-- 'export_model_figs.py': Illustrates how to export model data, and png files illustrating each topic, using a trained gcLDA model.
+- 'script_export_gclda_figs.py': Illustrates how to export model data and png files illustrating each topic from a trained gcLDA model object.
 
-Additional details about the gcLDA code, gcLDA hyper-parameter settings, and about these scripts are provided in the 'README.txt' in the 'python_gclda/documentation' subdirectory, as well as in the comments of the 'script_run_gclda.py' file. Note that all three models presented in the source paper ('no subregions', 'unconstrained subregions' and 'constrained subregions') can be trained by modifying the model hyper-parameters appropriately.
+Additional details about the gcLDA code, gcLDA hyper-parameter settings, and about these scripts are provided in the 'README.txt' in the 'documentation' subdirectory, as well as in the comments of the 'script_run_gclda.py' file. Note that all three models presented in the source paper ('no subregions', 'unconstrained subregions' and 'constrained subregions') can be trained by modifying the model hyper-parameters appropriately.
 
 ## Example results for trained models
 
-Results for some example trained models (including .png files illustrating all topics for the models) are included in the 'python_gclda/example_results' subdirectories.
+Results for some example trained models (including .png files illustrating all topics for the models) are included in the 'example_results' subdirectories.
 
 ## Citing the code and data
 
