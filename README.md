@@ -62,7 +62,7 @@ For additional examples of how to use the code, please see the following scripts
 - 'script_export_gclda_figs.py': Illustrates how to export model data and png files illustrating each topic from a trained gcLDA model object.
 - 'script_predict_holdout_data.py': Illustrates how to compute the log-likelihood for a hold-out dataset.
 
-Note that these scripts operate on the following version of the neurosynth dataset: "2015Filtered2_TrnTst1P1", which is a training dataset from which a subset of the corpus has been removed for testing (the test-data is in the dataset "2015Filtered2_TrnTst1P2"). If you want to run the model on the complete neurosynth dataset without test-data removed, use this version of the dataset: "2015Filtered2".
+Note that these scripts operate on the following version of the neurosynth dataset: "2015Filtered2_TrnTst1P1", which is a training dataset from which a subset document data has been removed for testing (the test-data is in the dataset: "2015Filtered2_TrnTst1P2"). The complete neurosynth dataset, without any test-data removed, is the version labeled "2015Filtered2".
 
 Additional details about the gcLDA code, gcLDA hyper-parameter settings, and about these scripts are provided in the 'README.txt' in the 'documentation' subdirectory, as well as in the comments of the 'script_run_gclda.py' file. Note that all three models presented in the source paper ('no subregions', 'unconstrained subregions' and 'constrained subregions') can be trained by modifying the model hyper-parameters appropriately.
 
