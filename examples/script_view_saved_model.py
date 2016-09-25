@@ -7,7 +7,7 @@ import gzip
 # --- Configure gcLDA model and dataset Parameters   ---
 # ------------------------------------------------------
 
-datasetLabel = '2015Filtered2_1000docs'
+datasetLabel = '2015Filtered2_TrnTst1p1'
 
 current_iter = 1000 # Saved model iteration
 

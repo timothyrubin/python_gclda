@@ -228,7 +228,7 @@ class gclda_model:
 		peak_probs = self.getPeakProbs(self.dat)
 
 		# eyemat: matrix that is added to the current doc_y_counts to generate the 'proposed' doc_y_counts. Precomputed for efficiency
-		eyemat = np.eye(self.nt)
+		#eyemat = np.eye(self.nt)
 
 		# Iterate over all peaks x, and sample a new y and r assignment for each
 		for i in range(self.ny):
@@ -255,11 +255,12 @@ class gclda_model:
 			doc_y_counts = self.ny_d_t[d,:] + self.gamma # The multinomial from which z is sampled is proportional to number of y assigned to each topic, plus constant \gamma
 			doc_z_counts = self.nz_d_t[d,:]
 			p_z_y = np.zeros([1,self.nt])
+			p_z_y[:] = self.compute_PropMultinomial_From_zy_Vectors(doc_z_counts,doc_y_counts)
 
 			# Compute probability of observing word->topic assignments (z) given the vectors for all proposed peak->topic assignments (y): p(z|y)
-			proposed_y_counts = np.dot(np.ones([self.nt,1]),doc_y_counts.reshape([1,len(doc_y_counts)]))
-			proposed_y_counts += eyemat # Add eyemat to convert a matrix of current doc_y_counts to a matrix of proposed doc_y_counts
-			p_z_y[:] = self.mnpdf_proportional(doc_z_counts, proposed_y_counts) # Returns a vector proportional to p(z_d|y_d) 
+			# proposed_y_counts = np.dot(np.ones([self.nt,1]),doc_y_counts.reshape([1,len(doc_y_counts)]))
+			# proposed_y_counts += eyemat # Add eyemat to convert a matrix of current doc_y_counts to a matrix of proposed doc_y_counts
+			# p_z_y[:] = self.mnpdf_proportional(doc_z_counts, proposed_y_counts) # Returns a vector proportional to p(z_d|y_d) 
 
 			# === Block sampling c_i and y_i assignments =====
 			# Now Compute the full sampling distribution: p(y_i,c_i|y,c,x,r,d) ~ p(x|mu, sigma) * p(r|d) * multinomial p(z|y)
@@ -524,6 +525,22 @@ class gclda_model:
 		y = np.exp(xlogp - np.max(xlogp)) 	# Add a constant before exponentiating to avoid any underflow issues
 		return y
 	
+	# -------------------------------------------------------------------------------------------------------------------------------
+	# Compute proportional multinomial probabilities of current x vector given current y vector, for all proposed y_i values 
+	# -------------------------------------------------------------------------------------------------------------------------------
+	# Note that this only returns values proportional to the relative probabilities of all proposals for y_i 
+	
+	def compute_PropMultinomial_From_zy_Vectors(self,z,y):
+		# Inputs:
+		#  z = a 1-by-T vector of current z counts for document d
+		#  y = a 1-by-T vector of current y counts (plus gamma) for document d
+		#  output: a 1-by-T vector giving the proportional probability of z, given that topic t was incremented
+
+		# Compute the proportional probabilities in log-space
+		logp = z * np.log( (y+1) / y )
+		p = np.exp(logp-np.max(logp));  # Add a constant before exponentiating to avoid any underflow issues
+		return p
+
 	# --------------------------------------------------------------------------------
 	# <<<<< Export Methods >>>>> Print Topics, Model parameters, and Figures to file |
 	# --------------------------------------------------------------------------------
@@ -808,4 +825,4 @@ class gclda_model:
 if __name__=="__main__":
 	print "Calling 'gclda_model.py' as a script"
 else:
-	print "Importing 'gclda_model.py'"
+	print "Importing 'gclda_model.py' module v03"
