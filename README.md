@@ -72,7 +72,7 @@ Results for some example trained models (including .png files illustrating all t
 
 ## Using alternative spatial distributions
 
-As described in our paper, the gcLDA model allows one to associate topics with any valid probability distribution for modeling the observed 'x' data. The package currently has the ability to train gcLDA models using Gaussian mixture models with any number of components, as well as Gaussian mixture models with spatial constraints. If you wish to modify the code to train a model using an alternative distribution, you will need to modify the following methods in gclda_model.py: (1) update_regions (2) getPeakProbs, as well as the lines of the (3) \__init__ method which allocate memory for storing the distributional parameters. 
+As described in our paper, the gcLDA model allows one to associate topics with any valid probability distribution for modeling the observed 'x' data. The package currently has the ability to train gcLDA models using Gaussian mixture models with any number of components, as well as Gaussian mixture models with spatial constraints. If you wish to modify the code to train a model using an alternative distribution, you will need to modify the following methods in gclda_model.py: (1) update_regions (2) getPeakProbs, as well as the lines of the (3) \_\_init__ method which allocate memory for storing the distributional parameters. 
 
 ## Citing the code and data
 
