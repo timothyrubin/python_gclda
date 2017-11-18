@@ -78,16 +78,14 @@ As described in our paper, the gcLDA model allows one to associate topics with a
 
 Please cite the following paper if you wish to reference this code:
 
-- Timothy N Rubin, Oluwasanmi Koyejo, Michael N Jones, Tal Yarkoni (Submitted). Generalized Correspondence-LDA Models (GC-LDA) for Identifying Functional Regions in the Brain.
+- Timothy N Rubin, Oluwasanmi Koyejo, Michael N Jones, Tal Yarkoni (2016). [Generalized Correspondence-LDA Models (GC-LDA) for Identifying Functional Regions in the Brain](http://papers.nips.cc/paper/6274-generalized-correspondence-lda-models-gc-lda-for-identifying-functional-regions-in-the-brain). 
 
 Additionally, the following paper demonstrates a variety of cool applications for gcLDA models trained on Neurosynth (such as "brain decoding"):
 
-- Timothy N Rubin, Oluwasanmi Koyejo, Krzysztof J Gorgolewski, Michael N Jones, Russell A Poldrack, Tal Yarkoni (Submitted). [Decoding brain activity using a large-scale probabilistic functional-anatomical atlas of human cognition](http://biorxiv.org/content/early/2016/06/18/059618)
+- Timothy N Rubin, Oluwasanmi Koyejo, Krzysztof J Gorgolewski, Michael N Jones, Russell A Poldrack, Tal Yarkoni (2017). [Decoding brain activity using a large-scale probabilistic functional-anatomical atlas of human cognition](http://biorxiv.org/content/early/2016/06/18/059618)
 
 To reference any of the datasets contained in this repository, or Neurosynth itself:
 
 - Tal Yarkoni, Russell A. Poldrack, Thomas E. Nichols, David C. Van Essen, and Tor D. Wager. "Large-scale automated synthesis of human functional neuroimaging data." Nature methods 8, no. 8 (2011): 665-670.
 
-Additionally, the complete Neurosynth datasets can be accessed at http://github.com/neurosynth/neurosynth-data (note however that those datasets need to be reformatted in order to make them work with the python_gclda package)
-
-For additional details about Neurosynth please visit [neurosynth.org](http://neurosynth.org/)
+Additionally, the complete Neurosynth datasets can be accessed at http://github.com/neurosynth/neurosynth-data (note however that those datasets need to be reformatted in order to make them work with the python_gclda package). For additional details about Neurosynth please visit [neurosynth.org](http://neurosynth.org/)
